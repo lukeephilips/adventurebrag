@@ -1,0 +1,20 @@
+<div class="row">
+<%= link_to "Add a new place", new_place_path if can? :create, Place%>
+<div class="places-panel">
+  <% @places.each do |place| %>
+    <div class="col s3  ">
+      <div class="card hoverable">
+        <div class="card-image">
+          <%= link_to image_tag(place.image, class: 'card-pic'), place_path(place) %>
+          <span class="card-title"><%= place.name %></span>
+        </div>
+        <% if current_user && current_user.admin_role %>
+          <div class="card-action">
+          <span><%= link_to "EDIT", edit_place_path(place) %><%= link_to "DELETE", place_path(place), method: 'delete' %></span>
+          </div>
+          <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>
+</div>

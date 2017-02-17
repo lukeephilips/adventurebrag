@@ -1,0 +1,77 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ @import "materialize";
+
+ $bg-primary: teal;
+ $text-primary: black;
+ $other: #B76EB8;
+ $highlight: #32115C;
+ $bg-secondary: #7ABA7A;
+
+
+ .navbar{
+   height: 120px;
+   background-color: $bg-primary;
+   a {
+     color: $text-primary;
+     transition: .75s;
+     font-weight: bold;
+     &:hover {
+       text-decoration: none;
+       color: $highlight;
+     }
+   }
+   h1 {
+     color: $text-primary;
+     font-size: 30px;
+   }
+   .user {
+     float: right;
+   }
+ }
+ .alert {
+   background-color: silver;
+   height: contain;
+   float: right;
+   font-weight: bold;
+   font-size: 1.25em;
+   vertical-align: middle;
+   text-align: center;
+   padding: 10px;
+ }
+ .alert-notice {
+   color: darkgreen;
+   border: 2px solid darkgreen;
+ }
+ .alert-alert {
+   color: maroon;
+   border: 2px solid maroon;
+ }
+ .btn{
+   background-color: $highlight;
+ }
+ .card-pic{
+   height: 230px;
+ }
+ .card-title{
+   font-size: 1.5em;
+   color: purple;
+   font-weight: bold;
+ }
+ .big-pic{
+   height: 500px;
+ }

@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col s4">
+    <%= form_for @place do |f| %>
+    <div class="input-group">
+      <span class="input-group-addon"><%= f.label :name %></span>
+      <%= f.text_field :name, class: 'form-control' %>
+    </div>
+    <div class="input-group">
+      <span class="input-group-addon"><%= f.label :description %></span>
+      <%= f.text_area :description, class: 'form-control' %>
+    </div>
+    <div class="input-group">
+      <span class="input-group-addon"><%= f.label :region %></span>
+      <%= f.text_field :region, class: 'form-control' %>
+    </div>
+    <div class="input-group">
+      <span class="input-group-addon"><%= f.label :category %></span>
+      <%= f.text_field :category, class: 'form-control' %>
+    </div>
+    <div class="input-group">
+      <%= f.label :image %>
+      <%= f.text_field :image %>
+    </div>
+    <hr>
+    <%= f.submit class: 'btn'%>
+    <% end %>
+  </div>
+</div>

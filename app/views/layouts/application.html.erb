@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Adventurebrag</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "https://fonts.googleapis.com/icon?family=Material+Icons" %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="title">
+        <h1><%= link_to "AdventureBrags", places_path %></h1>
+      </div>
+      <div class="user">
+        <%= link_to "Admin |", rails_admin_path if can? :access, :rails_admin %>
+        <% if user_signed_in? %>
+          <%= link_to "Log out", destroy_user_session_path, method: "delete" %>
+        <% else %>
+          <span><%= link_to "Log in", new_user_session_path %> | <%= link_to "Create Account", new_user_registration_path %></span>
+        <% end %>
+      </div>
+    </div>
+    <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>">
+        <%= value %>
+      </div>
+    <% end %>
+    <div class="container">
+      <%= yield %>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+<h1>All Places</h1>
+  <div class="admin-panel">
+    <h3>Admin Panel</h3>
+    <%= link_to "Add a new place", new_place_path %>
+  </div>
+<div class="places-panel">
+  <% @places.each do |place| %>
+    <h2> <%= link_to place.name, place_path(place)  %></h2>
+
+    <p><%= link_to "EDIT", edit_place_path(place) %> | <%= link_to "DELETE", place_path(place), method: 'delete' %></p>
+  <% end %>
+</div>

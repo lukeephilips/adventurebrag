@@ -1,0 +1,5 @@
+<%= link_to "back", places_path %>
+<h1><%= @place.name %></h1>
+<div class="admin-panel">
+<%= image_tag @place.image %>
+<%= link_to "Add an adventure", new_place_adventures_path %>
