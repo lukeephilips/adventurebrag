@@ -1,6 +1,8 @@
 require 'rails_helper'
-
 describe "the login path" do
+  before() do
+    FactoryGirl.create(:place)
+  end
   it "logs in" do
     visit root_path
     click_link 'Log in'

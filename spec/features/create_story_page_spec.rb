@@ -1,6 +1,8 @@
 require 'rails_helper'
-
 describe "the create story path" do
+  before() do
+    FactoryGirl.create(:place)
+  end
   it "logs in and makes a story" do
     visit root_path
     click_link 'Log in'
