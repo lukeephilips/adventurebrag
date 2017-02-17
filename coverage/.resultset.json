@@ -1,6 +1,31 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/luke/epicodus/rails/adventurebrag/spec/features/create_adventure_page_spec.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
       "/Users/luke/epicodus/rails/adventurebrag/spec/features/create_story_page_spec.rb": [
         1,
         null,
@@ -657,6 +682,10 @@
         1,
         null
       ],
+      "/Users/luke/epicodus/rails/adventurebrag/app/helpers/places_helper.rb": [
+        1,
+        null
+      ],
       "/Users/luke/epicodus/rails/adventurebrag/app/channels/application_cable/channel.rb": [
         1,
         1,
@@ -808,6 +837,21 @@
         1,
         null
       ],
+      "/Users/luke/epicodus/rails/adventurebrag/app/models/concerns/filterable.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        3,
+        3,
+        0,
+        null,
+        3,
+        null,
+        null,
+        null
+      ],
       "/Users/luke/epicodus/rails/adventurebrag/app/models/model.rb": [
         1,
         null,
@@ -817,6 +861,8 @@
         null
       ],
       "/Users/luke/epicodus/rails/adventurebrag/app/models/place.rb": [
+        1,
+        1,
         1,
         1,
         1,
@@ -907,6 +953,6 @@
         null
       ]
     },
-    "timestamp": 1487332360
+    "timestamp": 1487358908
   }
 }
