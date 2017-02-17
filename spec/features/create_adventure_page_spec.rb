@@ -18,12 +18,4 @@ describe "the create adventure path" do
     click_button 'Create Adventure'
     expect(page).to have_content "You added some ish"
   end
-  it "edits a adventure" do
-    click_link 'random place'
-    expect(page).to have_content 'Add an adventure'
-    click_link 'Add an adventure'
-    fill_in 'Name', :with => 'some ish'
-    click_button 'Create Adventure'
-    expect(page).to have_content "You added some ish"
-  end
 end
