@@ -15,6 +15,10 @@
       <div class="title">
         <h1><%= link_to "AdventureBrags", places_path %></h1>
       </div>
+      <!-- <div class="navigation">
+        <%= link_to "Places", places_path %>
+
+      </div> -->
       <div class="user">
         <%= link_to "Admin |", rails_admin_path if can? :access, :rails_admin %>
         <% if user_signed_in? %>

@@ -32,16 +32,26 @@
    }
  }
  .intro{
-   background-color: $other
+   background-color: $other;
+   a{
+     color: lighten($highlight, 10%);
+     transition: .75s;
+     font-weight: bold;
+     &:hover {
+       text-decoration: none;
+       color: darken($bg-primary, 30%);
+     }
+   }
  }
  .navbar{
    display: block;
    position: fixed;
-   top: 10px;
+   top: 0;
    width: 100%;
    height: 120px;
    margin-bottom: 10px;
    background-color: $bg-primary;
+   z-index: 1000;
    .title{
      display: inline-block;
      font-weight: bold;
