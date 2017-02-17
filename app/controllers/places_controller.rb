@@ -5,7 +5,7 @@ class PlacesController < ApplicationController
     @place = Place.find(params[:id])
   end
   def index
-    @places = Place.all
+    @places = Place.all.filter(params.slice(:region))
   end
 
   def new

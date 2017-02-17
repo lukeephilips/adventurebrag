@@ -1,18 +1,33 @@
+<%= link_to "Add a new place", new_place_path, class: "btn" if can? :create, Place%>
 <div class="row">
-<%= link_to "Add a new place", new_place_path if can? :create, Place%>
+  <ul id="place-sort">
+      <% if params[:region] %>
+        <li><%= link_to "All", places_path %></li>
+      <% end %>
+      <% Place.all.distinct.pluck(:region).each do |r| %>
+        <% if r == params[:region] %>
+          <li><%= link_to r, places_path(region: r), class: 'active_place' %></li>
+        <% else %>
+          <li><%= link_to r, places_path(region: r) %></li>
+        <% end %>
+      <% end %>
+    </ul>
+</div>
+<div class="row">
 <div class="places-panel">
   <% @places.each do |place| %>
     <div class="col s3  ">
       <div class="card hoverable">
         <div class="card-image">
+          <% if current_user && current_user.admin_role %>
+          <div class="admin-tray">
+            <p class="admin-links"><%= link_to "Edit", edit_place_path(place) %> | <%= link_to "Delete", place_path(place), method: 'delete' %></p>
+          </div>
+          <% end %>
           <%= link_to image_tag(place.image, class: 'card-pic'), place_path(place) %>
           <span class="card-title"><%= place.name %></span>
         </div>
-        <% if current_user && current_user.admin_role %>
-          <div class="card-action">
-          <span><%= link_to "EDIT", edit_place_path(place) %><%= link_to "DELETE", place_path(place), method: 'delete' %></span>
-          </div>
-          <% end %>
+
       </div>
     </div>
   <% end %>

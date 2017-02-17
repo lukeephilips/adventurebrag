@@ -16,25 +16,33 @@
 
  @import "materialize";
 
- $bg-primary: teal;
- $text-primary: black;
+ $bg-primary: #6BCAE2;
+ $text-primary: #41924B;
  $other: #B76EB8;
- $highlight: #32115C;
- $bg-secondary: #7ABA7A;
+ $highlight: #FE8402  ;
+ $bg-secondary: #41924B;
 
-
+ a {
+   color: $highlight;
+   font-weight: bold;
+   transition: .75s;
+   &:hover {
+     text-decoration: none;
+     color: $bg-primary;
+   }
+ }
  .navbar{
-   height: 120px;
-   background-color: $bg-primary;
    a {
-     color: $text-primary;
+     color: darken($highlight, 10%);
      transition: .75s;
      font-weight: bold;
      &:hover {
        text-decoration: none;
-       color: $highlight;
+       color: darken($bg-primary, 30%);
      }
    }
+   height: 120px;
+   background-color: $bg-primary;
    h1 {
      color: $text-primary;
      font-size: 30px;
@@ -68,10 +76,30 @@
    height: 230px;
  }
  .card-title{
-   font-size: 1.5em;
-   color: purple;
-   font-weight: bold;
+   font-size: 1.5em !important;
+   color: white !important;
+   font-weight: bold !important;
+   vertical-align: top !important;
  }
  .big-pic{
    height: 500px;
+ }
+ .admin-tray{
+   padding: 2px;
+   text-align: center;
+ }
+ .desc{
+   display: inline-block;
+ }
+ .active_place{
+   color: maroon;
+ }
+ #place-sort{
+  //  margin: 50px 0;
+   display: inline-block;
+   padding: 0;
+   li {
+     display: inline-block;
+     padding: 0 15px;
+   }
  }
